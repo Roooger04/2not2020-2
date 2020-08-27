@@ -77,3 +77,11 @@ console.log('-----------------------------')
 for(let fruta of vetor1) {
     console.log(fruta)
 }
+
+console.log('-------------------------')
+
+vetor1.forEach(fruta => console.log(fruta))
+
+vetor1.forEach(function(fruta)){
+    console.log(fruta)
+})
