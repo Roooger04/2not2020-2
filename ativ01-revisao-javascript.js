@@ -32,7 +32,14 @@
       Durante este mesmo loop, elimine a propriedade 'sigla' dos objetos.
 
 */
+/* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
+      para extrair as propriedades e seus valores e exibi-los com console.log().
+*/
+/* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
+      invoque a função escrita em 4) para exibi-lo.
+*/
 let estadosNe = []
+let vet2 = []
 
 let estado1 = {
    nome: 'Sergipe',
@@ -96,15 +103,20 @@ for(var i = 0; i < 9; i++){
     delete estadosNe[i].sigla
 }
 console.log(estado1['Densidade demografica'])
+console.log('--------------------------------')
 
-/* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
-      para extrair as propriedades e seus valores e exibi-los com console.log().
 
-*/
+const propriedades = estado1 => {
+    for(let propriedade in estado1){
+        console.log(`${propriedade}: ${estado1[propriedade]}`)
+    }
+}
 
-/* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
-      invoque a função escrita em 4) para exibi-lo.
 
+for(let objeto of estadosNe){
+    propriedades(objeto)
+    console.log('------------------------------')
+}
 /*
    6)
       a) Declare um vetor vazio.
@@ -117,3 +129,14 @@ console.log(estado1['Densidade demografica'])
          já existentes, e assim por diante.
 
 */
+vet2.push('Sergipe')
+vet2.unshift('Alagoas')
+vet2.splice(1, 0, 'Rio grande do norte')
+vet2.splice(1, 0, 'Paraíba')
+vet2.splice(2, 0, 'Pernambuco')
+vet2.splice(1, 0, 'Ceará')
+vet2.splice(4, 0, 'Piauí')
+vet2.splice(2, 0, 'Maranhão')
+vet2.splice(1, 0, 'Bahia')
+
+console.log(vet2)
