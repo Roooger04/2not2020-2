@@ -38,6 +38,18 @@
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.
 */
+/*
+   6)
+      a) Declare um vetor vazio.
+      b) Insira no vetor criado no item a) apenas o nome de cada Estado, conforme
+         os dados no topo deste arquivo, um de cada vez. Faça as inserções de 
+         modo que o vetor final esteja em ordem alfabética. No caso, o primeiro 
+         Estado (Sergipe), pode ser inserido com push(), mas o segundo (Alagoas)
+         deve ser inserido com unshift(), para manter a ordem alfabética. 
+         O terceiro Estado (Rio Grande do Norte) deve ser inserido entre os dois 
+         já existentes, e assim por diante.
+
+*/
 let estadosNe = []
 let vet2 = []
 
@@ -117,18 +129,7 @@ for(let objeto of estadosNe){
     propriedades(objeto)
     console.log('------------------------------')
 }
-/*
-   6)
-      a) Declare um vetor vazio.
-      b) Insira no vetor criado no item a) apenas o nome de cada Estado, conforme
-         os dados no topo deste arquivo, um de cada vez. Faça as inserções de 
-         modo que o vetor final esteja em ordem alfabética. No caso, o primeiro 
-         Estado (Sergipe), pode ser inserido com push(), mas o segundo (Alagoas)
-         deve ser inserido com unshift(), para manter a ordem alfabética. 
-         O terceiro Estado (Rio Grande do Norte) deve ser inserido entre os dois 
-         já existentes, e assim por diante.
 
-*/
 vet2.push('Sergipe')
 vet2.unshift('Alagoas')
 vet2.splice(1, 0, 'Rio grande do norte')
